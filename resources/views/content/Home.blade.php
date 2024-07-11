@@ -32,9 +32,10 @@
                 <div class="searchbar">
 
                     <div class="shadow"></div>
-                    <input type="text" placeholder="Search and find your friends..." class="input__search">
+                    <input type="text" placeholder="Search and find your friends..." class="input__search" required>
                     <ion-icon name="search-outline" class="icon__find"></ion-icon>
 
+                    {{--la proxima ves trabajaremos con este boton y todo el asunto chaval--}}
                 </div>
 
             </form>
@@ -73,8 +74,25 @@
                     </section>
     
                     <section class="comments">
-                        <input type="text" placeholder="deja un comentario" class="preview_comentary">
-    
+
+                        <form action="" id="form_commentaries">
+                            <div class="input_box">
+                                <input type="text" class="preview_comentary" required>
+                                <span>Deja un comentario...</span>
+                                <i></i>
+                               
+                            </div>
+
+                            <button type="submit" id="btn_coment">
+                                <ion-icon name="navigate-outline" class="btn_coment_icon"></ion-icon>
+                            </button>
+                            
+                        </form>
+
+                    </section>
+
+                    <section class="pop_commentaries">
+                        <ion-icon class="comments_view" name="chatbubble-outline"></ion-icon>
                     </section>
                 </section>
                
@@ -113,19 +131,31 @@
 
                     <section class="comments">
 
-                        <div class="input_container">
-                            <input type="text" class="preview_comentary">
-                            <span>Deja un comentario</span>
-                            <i></i>
-                        </div>
-                        
+                        <form action="" id="form_commentaries">
+                            <div class="input_box">
+                                <input type="text" class="preview_comentary" required>
+                                <span>Deja un comentario...</span>
+                                <i></i>
+                               
+                            </div>
 
-                        <ion-icon class="comments_view" name="chatbubble-outline"></ion-icon>
+                            <button type="submit" id="btn_coment">
+                                <ion-icon name="navigate-outline" class="btn_coment_icon"></ion-icon>
+                            </button>
+                            
+                        </form>
 
                     </section>
 
+                    <section class="pop_commentaries">
+                        <ion-icon class="comments_view" name="chatbubble-outline"></ion-icon>
+                    </section>
+                    {{-- Tengo la intencion de hacer que el boton de enviar solo aparezca cuando el usuario haya escrito un mensaje,
+                    de lo contrario permanecera oculto, todo esto se hara con jsx --}}
+
                 </section>
 
+                <div id="root"></div>
             </div>    
             <!-- esto es un ejemplo de como se veran las publicaciones de los usuarios -->
 

@@ -10,4 +10,9 @@ class ToudrexController extends Controller
     public function home(){
         return view('content.Home');
     }
+
+    public function profile(){
+        return view('content.Profile');
+    }
+    
 }

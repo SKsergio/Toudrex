@@ -281,12 +281,9 @@
 .root{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     width: 86%;
-    justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
-    gap: 10%;
+    margin-bottom: 20px;
 }
 .comments{
     width: 70%;
@@ -298,17 +295,29 @@
     /* background-color: var(--color-green); */
     gap: 9px;
 }
-.preview_comentary{
-    width: 85%;
+#form_commentaries{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     position: relative;
-    padding: 20px 10px 10px;
-    background: transparent;
-    outline: none;
+}
+#btn_coment{
+    background-color: transparent;
     border: none;
+    position: absolute;
+    right: 3px;
+    bottom: -5px;
+}
+.btn_coment_icon{
     color: var(--color-white);
-    font-size: 17px;
-    transition: 0.5s;
-    z-index: 10;
+    width: 35px;
+    height: 35px;
+    transition: all .6s ease;
+    cursor: pointer;
+
 }
 /* mensaje */
 .message__publication{
@@ -345,21 +354,45 @@
 .reactions1:hover, .reactions2:hover, .comments_view:hover{
     transform: scale(1.2);
 }
-.input_container{
-    width: 80%;
+/* comentaries */
+.input_box{
+    margin-top: 30px;  /*ojo aca*/
     position: relative;
+    max-height: 55px;
+    width: 80%;
+    margin: 0 auto;
     padding: 10px 10px 0 0;
 }
-.input_container span{
+.input_box .preview_comentary{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 17px;
+    transition: 0.5s;
+    z-index: 10;
+}
+.input_box span{
     position: absolute;
     left: 0;
     padding: 20px 10px 10px;
     pointer-events: none;
-    color: var(--color-cero);
+    color: var( --color-primary-variante1);
     font-size: 18px;
     transition: .5s;
+    font-family: var(--font--body);
 }
-.input_container i{
+/*  */
+.input_box .preview_comentary:valid~span,
+.input_box .preview_comentary:focus~span{
+    color: rgb(255, 255, 255);
+    font-size: 0.79em;
+    transform: translateY(-34px);
+}
+.input_box i{
     position: absolute;
     left: 0;
     bottom: 0;
@@ -370,4 +403,9 @@
     overflow: hidden;
     transition: .6s;
     pointer-events: none;
+}
+
+.input_box .preview_comentary:valid~i,
+.input_box .preview_comentary:focus~i{
+    height: 40px;
 }
