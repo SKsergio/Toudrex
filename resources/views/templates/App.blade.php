@@ -8,6 +8,8 @@
     {{-- general styles --}}
     <link rel="stylesheet" href="{{asset('css/normalice.css')}}">
     <link rel="stylesheet" href="{{asset('css/layaout.css')}}">
+    {{-- @viteReactRefresh --}}
+    @vite('resources/js/app.js')
     {{-- specific css --}}
     @stack('css')
 </head>
